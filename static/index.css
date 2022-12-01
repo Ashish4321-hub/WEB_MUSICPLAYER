@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+    margin-top: 100px;
+    background-image: url('pic/bg.jpg');
+    background-size: 100%;
+  }
+  img{
+    padding: 25px 25px 25px 25px;
+    border-radius: 10px;
+   max-width: 30%;
+  }
+  .takein{
+   max-width: 100%;
+  padding-left: 25%;
+  padding-right:25% ;
+    
+  }
+  p{
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .forget{
+    margin-right: 200px;
+    margin-bottom: 15px;;
+  }
+  button{
+    color: azure;
+  }
+  .dark{
+    
+    inline-size: 1%;
+  }
+  .mat{
+    background-color: #00000066;
+    padding: 0.5rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 1%;
+  }
+  h1{
+    color: white;}

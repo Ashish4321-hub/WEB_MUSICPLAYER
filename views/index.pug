@@ -1,0 +1,655 @@
+doctype html
+head
+  title Music Player
+  meta(charset='UTF-8')
+  // set viewport meta property
+  meta(name='viewport' content='Width=device-width, initial-scale=1.0')
+  // linking the css file
+  link(rel='stylesheet' href='../static/assets/css/style.css')
+  // use the below to use font-awesome icons
+  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.3/css/all.css' integrity='sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk' crossorigin='anonymous')
+.main-container
+  header.header
+    .logo
+      img(src='/static/pic/logo.png')
+      p.fav Favourites
+    .searchbox-container
+      .search-box
+        i.fas.fa-search
+        input(type='text' placeholder='Search')
+        i.fas.fa-microphone
+      i.fas.bell.fa-bell
+      img.profile-photo(src='/static/img/dreamy-nights-album-cover.jpg')
+  .for-responsiveness
+    main
+      .carousel
+        #slider
+          input#s1(type='radio' name='slider' checked='')
+          input#s2(type='radio' name='slider')
+          input#s3(type='radio' name='slider')
+          input#s4(type='radio' name='slider')
+          input#s5(type='radio' name='slider')
+          label#slide1(for='s1')
+            img(src='/static/assets/carousel/img1.jpg' alt='')
+          label#slide2(for='s2')
+            img(src='/static/assets/carousel/img2.jpg' alt='')
+          label#slide3(for='s3')
+            img(src='/static/assets/carousel/img3.jpg' alt='')
+          label#slide4(for='s4')
+            img(src='/static/assets/carousel/img4.webp' alt='')
+          label#slide5(for='s5')
+            img(src='/static/assets/carousel/img5.png' alt='')
+      #queue-1.queue-container
+        .queue-header
+          p Queue
+          .queue-btn-container
+            // here label is acting as a button for dropdown effect
+            label(for='mycheckbox')
+              | Queue 
+              span
+                i.fas.fa-angle-down
+            input#mycheckbox(type='checkbox')
+            .queue-btn-dropdown
+              a(href='') Playlists
+              hr
+              a(href='') Favourite Songs
+        .queue-elements-container
+          .queue-element
+            .song-image-container
+              p.queue-number 01
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/kissmemore.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Kiss Me More
+                p.queue-artist-name Doja Cat
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              i.fas.currently-on-song.fa-stream
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/peaches.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Peaches
+                p.queue-artist-name Justin Bieber
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 03
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/7rings.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name 7 Rings
+                p.queue-artist-name Ariana Grande
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 04
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/attention.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Attention
+                p.queue-artist-name Charlie Puth
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 05
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/good4u.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Good 4 U
+                p.queue-artist-name
+                  | Olivia Rodrigo/p&gt;
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 06
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/sugar.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Sugar
+                p.queue-artist-name Maroon 5
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 07
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/taylorswift.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Blankspace
+                p.queue-artist-name Taylor Swift
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 08
+              .image-container
+                img.queue-song-img(src="/static/assets/queue/we'regood.jpg")
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name We&apos;re Good
+                p.queue-artist-name Dua Lipa
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 09
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/shapeofyou.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Shape Of You
+                p.queue-artist-name Ed Sheeran
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 10
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/cheapthrills.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Cheap Thrills
+                p.queue-artist-name Sia
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 11
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/roar.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Roar
+                p.queue-artist-name Katy Perry
+            i.far.wishlist-icon.fa-heart
+          .queue-element
+            .song-image-container
+              p.queue-number 12
+              .image-container
+                img.queue-song-img(src='/static/assets/queue/starboy.jpg')
+                i.fas.play-btn.fa-play
+              .song-and-artist-container
+                p.queue-song-name Starboy
+                p.queue-artist-name The Weeknd
+            i.far.wishlist-icon.fa-heart
+      .latest-release-container
+        .latest-release-header
+          p Latest Release
+        .latest-release-cards-container
+          .latest-release-card
+            .song-name-and-img-container
+              .latest-release-img-container
+                label(for='play-btn-checkbox1')
+                  i.fas.latest-release-play-btn.fa-play.play-1
+                  i.latest-release-pause-btn.fas.fa-pause.pause-1
+              div
+                p.song-name Onism
+                p.date AUG 11, 2017
+            .latest-release-dropdown-container
+              label(for='latest-release-checkbox1')
+                i.fas.more-details.fa-ellipsis-h
+              input#latest-release-checkbox1(type='checkbox')
+              .latest-release-dropdown
+                .links-container
+                  i.fas.fa-play
+                  a(href='') Play Now
+                hr
+                .links-container
+                  i.fas.fa-plus
+                  a(href='') Add To Queue
+                hr
+                .links-container
+                  i.fas.fa-bars
+                  a(href='') Add To Favourites
+                hr
+                .links-container
+                  i.fas.fa-exclamation-circle
+                  a(href='')
+                    span
+                    | Get Info
+              p.time 4:44
+          .latest-release-card
+            .song-name-and-img-container
+              .latest-release-img-container
+                label(for='play-btn-checkbox2')
+                  i.fas.latest-release-play-btn.fa-play.play-2
+                  i.latest-release-pause-btn.fas.fa-pause.pause-2
+              div
+                p.song-name Onism
+                p.date AUG 11, 2017
+            .latest-release-dropdown-container
+              label(for='latest-release-checkbox2')
+                i.fas.more-details.fa-ellipsis-h
+              input#latest-release-checkbox2(type='checkbox')
+              .latest-release-dropdown
+                .links-container
+                  i.fas.fa-play
+                  a(href='') Play Now
+                hr
+                .links-container
+                  i.fas.fa-plus
+                  a(href='') Add To Queue
+                hr
+                .links-container
+                  i.fas.fa-bars
+                  a(href='') Add To Favourites
+                hr
+                .links-container
+                  i.fas.fa-exclamation-circle
+                  a(href='')
+                    span
+                    | Get Info
+              p.time 4:44
+        .latest-release-cards-container
+          .latest-release-card
+            .song-name-and-img-container
+              .latest-release-img-container
+                label(for='play-btn-checkbox3')
+                  i.fas.latest-release-play-btn.fa-play.play-3
+                  i.latest-release-pause-btn.fas.fa-pause.pause-3
+              div
+                p.song-name Onism
+                p.date AUG 11, 2017
+            .latest-release-dropdown-container
+              label(for='latest-release-checkbox3')
+                i.fas.more-details.fa-ellipsis-h
+              input#latest-release-checkbox3(type='checkbox')
+              .latest-release-dropdown
+                .links-container
+                  i.fas.fa-play
+                  a(href='') Play Now
+                hr
+                .links-container
+                  i.fas.fa-plus
+                  a(href='') Add To Queue
+                hr
+                .links-container
+                  i.fas.fa-bars
+                  a(href='') Add To Favourites
+                hr
+                .links-container
+                  i.fas.fa-exclamation-circle
+                  a(href='')
+                    span
+                    | Get Info
+              p.time 4:44
+          .latest-release-card
+            .song-name-and-img-container
+              .latest-release-img-container
+                label(for='play-btn-checkbox4')
+                  i.fas.latest-release-play-btn.fa-play.play-4
+                  i.latest-release-pause-btn.fas.fa-pause.pause-4
+              div
+                p.song-name Onism
+                p.date AUG 11, 2017
+            .latest-release-dropdown-container
+              label(for='latest-release-checkbox4')
+                i.fas.more-details.fa-ellipsis-h
+              input#latest-release-checkbox4(type='checkbox')
+              .latest-release-dropdown
+                .links-container
+                  i.fas.fa-play
+                  a(href='') Play Now
+                hr
+                .links-container
+                  i.fas.fa-plus
+                  a(href='') Add To Queue
+                hr
+                .links-container
+                  i.fas.fa-bars
+                  a(href='') Add To Favourites
+                hr
+                .links-container
+                  i.fas.fa-exclamation-circle
+                  a(href='')
+                    span
+                    | Get Info
+              p.time 4:44
+      .popular-artists-container
+        .popular-artists-header
+          p Popular Artists
+        .popular-artists-img-container
+          .popular-artists-1-container
+            .popular-artists-img1-container
+              .popular-artists
+                a(href='index2.html')
+                  i.fas.popular-artists-play-btn.fa-play
+            p Ed Sheeran
+          .popular-artists-1-container
+            .popular-artists-img1-container
+              .popular-artists.popular-artists-2
+                a(href='index2.html')
+                  i.fas.popular-artists-play-btn.fa-play
+            p ColdPlay
+          .popular-artists-1-container
+            .popular-artists-img1-container
+              .popular-artists.popular-artists-3
+                a(href='index2.html')
+                  i.fas.popular-artists-play-btn.fa-play
+            p Zayn
+          .popular-artists-1-container
+            .popular-artists-img1-container
+              .popular-artists.popular-artists-4
+                a(href='index2.html')
+                  i.fas.popular-artists-play-btn.fa-play
+            p Charlie Puth
+          .popular-artists-1-container
+            .popular-artists-img1-container
+              .popular-artists.popular-artists-5
+                a(href='index2.html')
+                  i.fas.popular-artists-play-btn.fa-play
+            p Imagine Dragon
+          .popular-artists-1-container
+            .popular-artists-img1-container
+              .popular-artists.popular-artists-6
+                a(href='index2.html')
+                  i.fas.popular-artists-play-btn.fa-play
+            p Bruno Mars
+      .stations-container
+        .stations-logo-container
+          .stations-logo-img-container
+        .stations-img-container
+          .stations-img
+            // <div class="station-1">
+            .img-1
+            //
+              <p>Love</p>
+              </div>
+          p.stations-para Love
+        .stations-img-container
+          .stations-img
+            // <div class="station-1">
+            .img-1.img-2
+            //
+              <p>Love</p>
+              </div>
+          p.stations-para Retro
+        .stations-img-container
+          .stations-img
+            // <div class="station-1">
+            .img-1.img-3
+            //
+              <p>Love</p>
+              </div>
+          p.stations-para Chill
+        .stations-img-container
+          .stations-img
+            // <div class="station-1">
+            .img-1.img-4
+            //
+              <p>Love</p>
+              </div>
+          p.stations-para Workout
+        .stations-img-container
+          .stations-img
+            // <div class="station-1">
+            .img-1.img-5
+            // <p>Love</p>
+            // </div>
+          p.stations-para Rock
+        .stations-img-container
+          .stations-img
+            // <div class="station-1">
+            .img-1.img-6
+            //
+              <p>Love</p>
+              </div>
+          p.stations-para Pop
+      .genre-container
+        .genre-img-container
+          p Party
+        .genre-img-container.genre-img-2
+          p Electronic
+        .genre-img-container.genre-img-3
+          p Road Trip
+      .latest-english-container
+        .latest-english-header
+          p Latest English
+        .latest-english-content
+          .latest-english-card-container
+            img(src='/static/songs/queue-04.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-05.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-02.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-03.png')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-04.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-03.png')
+            p Onism
+            p AUG 11, 2017
+      // Latest English Container
+      .latest-english-container
+        .latest-english-header
+          p Latest Hindi
+        .latest-english-content
+          .latest-english-card-container
+            img(src='/static/songs/queue-04.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-05.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-02.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-03.png')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-04.jpg')
+            p Onism
+            p AUG 11, 2017
+          .latest-english-card-container
+            img(src='/static/songs/queue-03.png')
+            p Onism
+            p AUG 11, 2017
+    #queue-2.queue-container
+      .queue-header
+        p Queue
+        .queue-btn-container
+          // here label is acting as a button for dropdown effect
+          label(for='mycheckbox')
+            | Queue 
+            span
+              i.fas.fa-angle-down
+          input#mycheckbox(type='checkbox')
+          .queue-btn-dropdown
+            a(href='') Playlists
+            hr
+            a(href='') Favourite Songs
+      .queue-elements-container
+        .queue-element
+          .song-image-container
+            p.queue-number 01
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/kissmemore.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Kiss Me More
+              p.queue-artist-name Doja Cat
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            i.fas.currently-on-song.fa-stream
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/peaches.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Peaches
+              p.queue-artist-name Justin Bieber
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 03
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/7rings.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name 7 Rings
+              p.queue-artist-name Ariana Grande
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 04
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/attention.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Attention
+              p.queue-artist-name Charlie Puth
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 05
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/good4u.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Good 4 U
+              p.queue-artist-name
+                | Olivia Rodrigo/p&gt;
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 06
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/sugar.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Sugar
+              p.queue-artist-name Maroon 5
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 07
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/taylorswift.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Blankspace
+              p.queue-artist-name Taylor Swift
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 08
+            .image-container
+              img.queue-song-img(src="/static/assets/queue/we'regood.jpg")
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name We&apos;re Good
+              p.queue-artist-name Dua Lipa
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 09
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/shapeofyou.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Shape Of You
+              p.queue-artist-name Ed Sheeran
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 10
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/cheapthrills.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Cheap Thrills
+              p.queue-artist-name Sia
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 11
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/roar.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Roar
+              p.queue-artist-name Katy Perry
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+        .queue-element
+          .song-image-container
+            p.queue-number 12
+            .image-container
+              img.queue-song-img(src='/static/assets/queue/starboy.jpg')
+              i.fas.play-btn.fa-play
+            .song-and-artist-container
+              p.queue-song-name Starboy
+              p.queue-artist-name The Weeknd
+          span.nav-link
+            i.far.wishlist-icon.fa-heart
+    footer
+      // Song Thumnail, Title, Singer
+      #footer-song-info
+        #footer-song-image
+        #footer-song-name
+          span Peaches
+          span.subtitle Justin Bieber
+        div
+          span.nav-link
+            i.far.fa-heart.subtitle
+          span.nav-link
+            i.fas.fa-ban.subtitle
+      // Contains Player Controls: Play, Pause, Next, Previous, Shuffle and Repeat with Slider
+      #player
+        #player-control
+          div
+            i.fas.fa-random
+          div
+            i.fas.fa-step-backward
+          div
+            i.far.fa-pause-circle(style='font-size: 2rem;')
+          div
+            i.fas.fa-step-forward
+          div
+            i.fas.fa-redo
+        #player-slider-container
+          .subtitle
+            | 0:00
+          input(type='range' min='0' max='100' value='25')
+          .subtitle
+            | 4:44
+      // Volume buttom, Expand button
+      .player-extras
+        div
+          i.fas.fa-list-ul
+        div
+          i.fas.fa-laptop
+        .volume-container
+          span
+            i.fas.fa-volume-up
+          input#volume-slider.slider(type='range' min='0' max='100' value='50')
+        div
+          i.fas.fa-expand
